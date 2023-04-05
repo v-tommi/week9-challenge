@@ -8,7 +8,7 @@ inquirer
       message: 'Project Title:',
       name: 'title',
     },
-    /*{
+    {
       type: 'input',
       message: 'Project Description:',
       name: 'description',
@@ -29,7 +29,7 @@ inquirer
       name: 'license',
       choices: ['Apache', 'ISC','MIT']
     },
-    /*{
+    {
       type: 'input',
       message: 'Contributing:',
       name: 'contributing',
@@ -43,7 +43,7 @@ inquirer
       type: 'input',
       message: 'Questions:',
       name: 'questions',
-    },*/
+    },
   ])
   .then((response) => {
     let jsonString = JSON.stringify(response);
