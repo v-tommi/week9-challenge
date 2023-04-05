@@ -1,17 +1,18 @@
-# char 9
+# Testing title
   ## Table of Contents
 
   ***
   ## Description
-  don't know
+  undefined
   ***
   ## Installation
-  here we go again
+  undefined
   ***
   ## Usage
-  blah blah
+  undefined
   ***
   ## License
+  MIT
   ***
   ## Contributing
   ***
