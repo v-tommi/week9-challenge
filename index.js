@@ -27,6 +27,7 @@ inquirer
       type: 'list',
       message: 'License Type:',
       name: 'license',
+      choices: ['Apache', 'ISC','MIT']
     },
     /*{
       type: 'input',
@@ -47,20 +48,28 @@ inquirer
   .then((response) => {
     let jsonString = JSON.stringify(response);
     let json = response;
+
+    const licenseTypes = [
+      {
+        "name": "Apache",
+        "badge": "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+      }
+    ]
+
     const {
-      title: vTitle, 
-      description: vDesc, 
-      instructions: vInstructions, 
-      usage: vUsage, 
-      license: vLicense, 
+      title: vTitle,
+      description: vDesc,
+      instructions: vInstructions,
+      usage: vUsage,
+      license: vLicense,
       contributing: vContributing,
       tests: vTests,
       questions: vQuestions
     } = response
-    console.log(vTitle);
-    console.log(json)
-    fs.writeFile('ChallengeREADME.md', 
-    `# ${vTitle}
+    //console.log(vTitle);
+    //console.log(json);
+    fs.writeFile('ChallengeREADME.md',
+      `# ${vTitle};
   ## Table of Contents
 
   ***
@@ -71,23 +80,24 @@ inquirer
   ${vInstructions}
   ***
   ## Usage
-  ${vUse}
+  ${vUsage}
   ***
   ## License
+  This application is utilizing the ${vLicense} license.
   ***
   ## Contributing
+  ${vContributing}
   ***
   ## Tests
+  ${vTests}
   ***
   ## Questions
+  ${vQuestions}
 
     `)
   }
-    
-  
-
   );
-  
+
 
 
 
